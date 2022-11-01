@@ -1,4 +1,4 @@
-﻿public delegate void MovementDelegate(float inputX, float inputY, bool isWalking, bool isRunning, bool isIdle, bool isCarrying, ToolEffect  toolEffect,
+﻿public delegate void MovementDelegate(float xInput, float yInput, bool isWalking, bool isRunning, bool isIdle, bool isCarrying, ToolEffect  toolEffect,
     bool isUsingToolRight, bool isUsingToolLeft, bool isUsingToolUp, bool isUsingToolDown,
     bool isLiftingToolRight, bool isLiftingToolLeft, bool isLiftingToolUp, bool isLiftingToolDown,
     bool isPickingRight, bool isPickingLeft, bool isPickingUp, bool isPickingDown,
@@ -9,7 +9,7 @@ public static class EventHandler
 {
     public static event MovementDelegate MovementEvent;
 
-    public static void CallMovementEvent(float inputX, float inputY, bool isWalking, bool isRunning, bool isIdle, bool isCarrying, ToolEffect toolEffect,
+    public static void CallMovementEvent(float xInput, float yInput, bool isWalking, bool isRunning, bool isIdle, bool isCarrying, ToolEffect toolEffect,
     bool isUsingToolRight, bool isUsingToolLeft, bool isUsingToolUp, bool isUsingToolDown,
     bool isLiftingToolRight, bool isLiftingToolLeft, bool isLiftingToolUp, bool isLiftingToolDown,
     bool isPickingRight, bool isPickingLeft, bool isPickingUp, bool isPickingDown,
@@ -18,7 +18,7 @@ public static class EventHandler
     {
         if (MovementEvent != null)
         {
-            MovementEvent(inputX, inputY, isWalking, isRunning, isIdle, isCarrying, toolEffect,
+            MovementEvent(xInput, yInput, isWalking, isRunning, isIdle, isCarrying, toolEffect,
      isUsingToolRight, isUsingToolLeft, isUsingToolUp, isUsingToolDown,
      isLiftingToolRight, isLiftingToolLeft, isLiftingToolUp, isLiftingToolDown,
      isPickingRight, isPickingLeft, isPickingUp, isPickingDown,
